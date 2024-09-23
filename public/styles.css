@@ -1,0 +1,148 @@
+/* General styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #190933;
+  color: #333;
+  padding: 40px;
+}
+
+/* Centered container for two-column layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: #5dd9c1;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Left column styling (form section) */
+.left-column {
+  flex: 1;
+  padding-right: 40px;
+  border-right: 2px solid #190933;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #b084cc;
+  margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #555;
+}
+
+input {
+  padding: 15px;
+  font-size: 1rem;
+  border: 2px solid #5dd9c1;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #5dd9c1;
+}
+
+button {
+  padding: 15px;
+  background-color: #5dd9c1;
+  color: #b084cc;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #5dd9c1;
+  transform: scale(1.05);
+}
+
+/* Right column styling (output section) */
+.right-column {
+  flex: 1;
+  padding-left: 40px;
+}
+
+#recipe-output {
+  display: none;
+  background-color: #acfcd9;
+  padding: 20px;
+  border-radius: 15px;
+  border-left: 8px solid #665687;
+}
+
+#recipe-output h3 {
+  font-size: 1.8rem;
+  color: #665687;
+  margin-bottom: 15px;
+}
+
+#recipe-content {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #444;
+  white-space: pre-wrap;
+}
+
+/* Color accents for the two-column layout */
+.container {
+  background-color: #fff;
+}
+
+.left-column {
+  background-color: #acfcd9;
+  padding: 40px;
+}
+
+.right-column {
+  background-color: #b084cc;
+  padding: 40px;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+  .container {
+      flex-direction: column;
+      padding: 20px;
+  }
+
+  .left-column, .right-column {
+      padding: 20px;
+      border-right: none;
+  }
+
+  h1 {
+      font-size: 2rem;
+  }
+
+  input, button {
+      font-size: 1rem;
+  }
+
+  #recipe-content {
+      font-size: 1rem;
+  }
+}
