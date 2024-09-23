@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const path = require('path'); 
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 require('dotenv').config();  // To load the API key from the .env file
 
@@ -12,6 +13,10 @@ app.use(express.static('public'));  // Serve static files from the "public" dire
 
 // Initialize the Google Generative AI API with the API key
 const genAI = new GoogleGenerativeAI(process.env.API_KEY);
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 // Route to handle recipe generation
 app.post('/generate-recipe', async (req, res) => {
