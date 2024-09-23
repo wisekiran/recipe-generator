@@ -9,7 +9,7 @@ const port = process.env.PORT || 3000;
 
 // Middleware to parse JSON and serve static files
 app.use(bodyParser.json());
-app.use(express.static('public'));  // Serve static files from the "public" directory
+app.use(express.static(path.join(__dirname, '/public')));  // Serve static files from the "public" directory
 
 // Initialize the Google Generative AI API with the API key
 const genAI = new GoogleGenerativeAI(process.env.API_KEY);
