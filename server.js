@@ -4,7 +4,7 @@ const { GoogleGenerativeAI } = require('@google/generative-ai');
 require('dotenv').config();  // To load the API key from the .env file
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Middleware to parse JSON and serve static files
 app.use(bodyParser.json());
@@ -34,7 +34,9 @@ app.post('/generate-recipe', async (req, res) => {
     }
 });
 
-// Start the server
+//start the server
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
+
+
