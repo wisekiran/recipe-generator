@@ -6,6 +6,10 @@ Recipe Generator is a web application that helps you discover new and delicious 
 
 - **Ingredient-Based Search**: Find recipes by inputting available ingredients.  
 - **Detailed Recipe Info**: View ingredients, instructions, and prep time.  
+- **Cuisine Filtering**: Filter recipes based on different cuisines.  
+- **Dietary Preferences**: Search for recipes that cater to specific dietary needs (e.g., vegan, gluten-free).  
+- **Step-by-Step Instructions**: Clear, easy-to-follow instructions for each recipe.  
+- **Dynamic Ingredient Input**: Add or remove ingredients easily to refine your search results.  
 
 ## 🛠️ Tech Stack
 
