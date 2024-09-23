@@ -15,7 +15,7 @@ app.use(express.static('public'));  // Serve static files from the "public" dire
 const genAI = new GoogleGenerativeAI(process.env.API_KEY);
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
 // Route to handle recipe generation
