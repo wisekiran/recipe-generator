@@ -34,6 +34,10 @@ app.post('/generate-recipe', async (req, res) => {
     }
 });
 
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/public/index.html');
+});
+
 //start the server
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
