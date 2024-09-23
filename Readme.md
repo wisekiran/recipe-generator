@@ -15,7 +15,7 @@ Recipe Generator is a web application that helps you discover new and delicious 
 
 - **Frontend**: HTML, CSS, JavaScript
 - **API**: Gemini API
-- **Backend**: Node.js
+- **Backend**: Node.js, Express
 - **Deployment**: Vercel  
 
 ## 🌐 Live Demo
