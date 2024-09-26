@@ -14,6 +14,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #ffffff;
+  background-image: radial-gradient(#665687 2px, transparent 2px);
+  background-size: 20px 20px;
+  background-position: 0 0;
 }
 
 /* Centered container for two-column layout */
@@ -90,6 +94,48 @@ button:hover {
 .right-column {
   flex: 1;
   padding-left: 40px;
+}
+
+/* Spinner Styles */
+.spinner {
+  border: 8px solid #f3f3f3;         /* Light gray */
+  border-top: 8px solid #3498db;     /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+
+  /* Center the spinner using flexbox */
+  display: inline-block;
+}
+
+/* Centering the spinner container */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;   /* Make it take the full height of the parent */
+}
+
+/* Adjust spinner size for larger screens */
+@media (min-width: 600px) {
+  .spinner {
+    border: 12px solid #f3f3f3;
+    border-top: 12px solid #3498db;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Keyframes for spinner animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Ensure the right-column has relative positioning if needed */
+.right-column {
+  position: relative;
 }
 
 #recipe-output-container {
