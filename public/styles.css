@@ -9,16 +9,22 @@ body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   background-color: #190933;
   color: #333;
-  padding: 40px;
+  margin: 0;
+  min-height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Centered container for two-column layout */
 .container {
   max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
+  min-height: 500px; /* Adjust as needed */
   display: flex;
   justify-content: space-between;
   background-color: #5dd9c1;
+  margin: 40px;
   padding: 40px;
   border-radius: 15px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
@@ -86,25 +92,118 @@ button:hover {
   padding-left: 40px;
 }
 
-#recipe-output {
+#recipe-output-container {
   display: none;
   background-color: #acfcd9;
-  padding: 20px;
   border-radius: 15px;
   border-left: 8px solid #665687;
 }
 
+/* Center the recipe-output container */
+#recipe-output {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Style the markdown content container */
+.markdown-content {
+  max-width: 600px;
+  width: 100%;
+  text-align: left; /* Left-align text for better readability */
+  padding: 20px;
+}
+
+/* Center block-level elements within markdown content */
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6,
+.markdown-content p,
+.markdown-content ul,
+.markdown-content ol,
+.markdown-content blockquote,
+.markdown-content pre {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Style headings */
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3 {
+  color: #2c3e50;
+  margin-bottom: 0.5em;
+}
+
+/* Style paragraphs */
+.markdown-content p {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
+
+/* Style lists */
+.markdown-content ul,
+.markdown-content ol {
+  margin: 1em 0;
+  padding-left: 1.5em;
+}
+
+.markdown-content li {
+  margin-bottom: 0.5em;
+}
+
+/* Style code blocks */
+.markdown-content code {
+  background-color: #f4f4f4;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+.markdown-content pre {
+  background-color: #f4f4f4;
+  padding: 1em;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+/* Style blockquotes */
+.markdown-content blockquote {
+  border-left: 4px solid #ccc;
+  margin: 1em 0;
+  padding-left: 1em;
+  color: #666;
+  font-style: italic;
+}
+
+/* Add some basic styling to links */
+.markdown-content a {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+.markdown-content a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .markdown-content {
+      padding: 10px;
+  }
+}
+
+
 #recipe-output h3 {
+  padding: 12px;
   font-size: 1.8rem;
   color: #665687;
   margin-bottom: 15px;
-}
-
-#recipe-content {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: #444;
-  white-space: pre-wrap;
 }
 
 /* Color accents for the two-column layout */

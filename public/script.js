@@ -16,12 +16,13 @@ document.getElementById('recipe-form').addEventListener('submit', async (e) => {
 
         const data = await response.json();
 
-        // Display the generated recipe
-        document.getElementById('recipe-content').innerText = data.recipe;
-        document.getElementById('recipe-output').style.display = 'block';
+        // Convert markdown to HTML and display the generated recipe
+        const htmlContent = marked.parse(data.recipe);
+        document.getElementById('recipe-content').innerHTML = htmlContent;
+        document.getElementById('recipe-output-container').style.display = 'block';
     } catch (error) {
         console.error('Error generating recipe:', error);
         document.getElementById('recipe-content').innerText = 'An error occurred. Please try again later.';
-        document.getElementById('recipe-output').style.display = 'block';
+        document.getElementById('recipe-output-container').style.display = 'block';
     }
 });

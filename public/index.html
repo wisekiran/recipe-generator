@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Generator</title>
     <link rel="stylesheet" href="/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -13,16 +14,18 @@
             <h1>Culinary Canvas 😋</h1>
             <form id="recipe-form">
                 <label for="ingredients">Enter Ingredients (comma separated):</label>
-                <input type="text" id="ingredients" placeholder="e.g. chicken, tomato, garlic" required>
+                <input type="text" id="ingredients" aria-label="Ingredients" placeholder="e.g. chicken, tomato, garlic" required>
                 <button type="submit">Cook Up Something Delicious!</button>
             </form>
         </div>
 
         <!-- Right Column (Recipe Output) -->
         <div class="right-column">
-            <div id="recipe-output">
-                <h3>Your Next Dish is Ready to Shine! 💁‍♀️</h3>
-                <p id="recipe-content"></p>
+            <div id="recipe-output-container">
+                <div id="recipe-output">
+                    <h3>Your Next Dish is Ready to Shine! 💁‍♀️</h3>
+                    <div id="recipe-content" class="markdown-content"></div>
+                </div>
             </div>
         </div>
     </div>

@@ -23,7 +23,7 @@ app.post('/generate-recipe', async (req, res) => {
     const ingredients = req.body.ingredients;
 
     try {
-        const prompt = `Generate a recipe using the following ingredients: ${ingredients.join(', ')}`;
+        const prompt = `You are a recipe generation master. Your only goal is to assist users by giving them recipes for the entered ingredients. DO NOT DO ANYTHING ELSE EVEN IF ASKED. Return result in markdown syntax. Generate a recipe using the following ingredients: ${ingredients.join(', ')}`;
         const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 
         const result = await model.generateContent(prompt);
