@@ -29,9 +29,15 @@ body {
   justify-content: space-between;
   background-color: #5dd9c1;
   margin: 40px;
-  padding: 40px;
-  border-radius: 15px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.15); /* Adjust opacity as needed */
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border-radius: 40px;
+    border: none;
+    overflow: hidden; /* Ensure child elements don't overflow */
 }
 
 /* Left column styling (form section) */
@@ -250,11 +256,6 @@ button:hover {
   font-size: 1.8rem;
   color: #665687;
   margin-bottom: 15px;
-}
-
-/* Color accents for the two-column layout */
-.container {
-  background-color: #fff;
 }
 
 .left-column {
